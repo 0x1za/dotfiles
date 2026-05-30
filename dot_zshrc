@@ -1,6 +1,6 @@
 # if you want to profile your zsh startup time
 # uncomment the following line and run zprof as the first command in a new shell
-zmodload zsh/zprof
+# zmodload zsh/zprof  # uncomment + add `zprof` at end of file to profile startup
 
 #------------------------------------------------------
 # fpath additions (must come before compinit / oh-my-zsh)
@@ -171,5 +171,5 @@ fi
 # fzf
 [ -f "$HOME/.fzf.zsh" ] && source "$HOME/.fzf.zsh"
 
-# iTerm2 shell integration
-[ -f "$HOME/.iterm2_shell_integration.zsh" ] && source "$HOME/.iterm2_shell_integration.zsh"
+# iTerm2 shell integration (only load inside iTerm2 to avoid raw escape sequences elsewhere)
+[ "$TERM_PROGRAM" = "iTerm.app" ] && [ -f "$HOME/.iterm2_shell_integration.zsh" ] && source "$HOME/.iterm2_shell_integration.zsh"
