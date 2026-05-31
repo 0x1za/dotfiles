@@ -107,6 +107,7 @@ alias ...='cd ../..'
 alias ....='cd ../../../'
 alias ll="ls -asl"
 alias week='date +%V'
+alias serve='python -m http.server'
 
 if [ -x "$(command -v nvim)" ]; then
   alias vim='nvim'
