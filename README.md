@@ -79,7 +79,7 @@ Practical guidance for maintaining this setup.
   </tr>
   <tr>
     <td width="240"><img src="https://media.giphy.com/media/bCDzFTSQ3JL8c/giphy.gif" width="220" alt="Silky Johnson at the Player Haters Ball"></td>
-    <td><strong>Indentation policy.</strong><br>Two spaces, enforced by <code>stylua.toml</code>. Tab enthusiasts are welcome to open an issue. It will be read, hated, and hated again in the morning.</td>
+    <td><strong>Indentation policy.</strong><br>Tabs. Space enthusiasts are welcome to open an issue. It will be read, hated, and hated again in the morning.</td>
   </tr>
   <tr>
     <td width="240"><img src="https://media.giphy.com/media/Qf9SNhYtaC4aQ/giphy.gif" width="220" alt="Lil Jon shouting yeah"></td>
