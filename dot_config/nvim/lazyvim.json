@@ -1,6 +1,7 @@
 {
   "extras": [
     "lazyvim.plugins.extras.ai.tabnine",
+    "lazyvim.plugins.extras.dap.core",
     "lazyvim.plugins.extras.editor.fzf",
     "lazyvim.plugins.extras.editor.harpoon2",
     "lazyvim.plugins.extras.editor.leap",
@@ -21,6 +22,7 @@
     "lazyvim.plugins.extras.lang.toml",
     "lazyvim.plugins.extras.lang.typescript",
     "lazyvim.plugins.extras.lang.typescript.vtsls",
+    "lazyvim.plugins.extras.test.core",
     "lazyvim.plugins.extras.util.gh",
     "lazyvim.plugins.extras.util.gitui",
     "lazyvim.plugins.extras.util.startuptime"
