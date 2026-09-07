@@ -9,11 +9,8 @@ window-title-font-family = "Fira Code"
 # ==============================================================================
 # FONT
 # ==============================================================================
-# Nerd Font variant of Fira Code so LazyVim, neo-tree and the statusline icons
-# render instead of showing boxes. Ligatures still work.
-font-family = "FiraCode Nerd Font Mono"
+font-family = "Fira Code"
 font-size = 12
-font-thicken = true
 font-feature = calt
 font-feature = liga
 adjust-cell-height = 10%
@@ -21,11 +18,8 @@ adjust-cell-height = 10%
 # ==============================================================================
 # THEME & APPEARANCE
 # ==============================================================================
-# Matches the gruvbox colorscheme in Neovim so the editor and the shell agree.
-# Previous choice, if you want it back: theme = CGA
-theme = Gruvbox Dark Hard
-# Nudge low-contrast ls/grep colours up so they stay readable on dark backgrounds.
-minimum-contrast = 1.1
+# Built-in theme name (Run `ghostty +list-themes` in terminal to see all)
+theme = CGA
 
 window-padding-x = 12
 window-padding-y = 10
@@ -40,6 +34,7 @@ window-save-state = always
 # ==============================================================================
 cursor-style = block
 cursor-style-blink = true
+# cursor-color = #f5e0dc
 mouse-hide-while-typing = true
 copy-on-select = clipboard
 
