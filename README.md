@@ -66,7 +66,7 @@ Practical guidance for maintaining this setup.
     <td><strong>Handle <code>--force</code> with care.</strong><br><code>chezmoi apply --force</code> will overwrite a hand-edited <code>.zshrc</code> without asking, then introduce itself. Run <code>chezmoi diff</code> first. It is a hell of a flag.</td>
   </tr>
   <tr>
-    <td width="240"><img src="https://media.giphy.com/media/uk0OE1jkLXwUkHSGlk/giphy.gif" width="220" alt="Charlie Murphy"></td>
+    <td width="240"><img src="https://media.giphy.com/media/Z36diZTBOwJLG/giphy.gif" width="220" alt="Charlie Murphy"></td>
     <td><strong>Read the theme docs before committing.</strong><br><code>theme = CGA</code> in Ghostty is a bold choice. Test it on a throwaway window first, or your next launch is darkness, everybody.</td>
   </tr>
   <tr>
