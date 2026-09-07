@@ -23,8 +23,9 @@ adjust-cell-height = 10%
 theme = IBM 5153 CGA
 
 window-padding-x = 12
-window-padding-y = 10
-window-padding-balance = true
+# top,bottom: keep the gap under the tab bar tight
+window-padding-y = 4,10
+window-padding-balance = false
 window-decoration = true
 # "tabs" puts the tab bar into the titlebar and keeps it visible even with a
 # single tab, so the title above stays in view inside tmux.
