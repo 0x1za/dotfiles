@@ -1,0 +1,16 @@
+# Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
+export PATH="$PATH:$GOPATH/bin"
+
+# Generated for envman. Do not edit.
+[ -s "$HOME/.config/envman/load.sh" ] && source "$HOME/.config/envman/load.sh"
+
+[ -f ~/.fzf.bash ] && source ~/.fzf.bash
+. "$HOME/.cargo/env"
+
+# Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
+
+# Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
+export PATH="$HOMEBREW_PREFIX/opt/chruby/share/chruby/chruby.sh" # Or run `brew info chruby` to find out installed directory
+export PATH="$PATH:$HOME/.rvm/bin"
+
+. "$HOME/.local/bin/env"
