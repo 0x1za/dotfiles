@@ -1,0 +1,75 @@
+# ==============================================================================
+# FONT CONFIGURATION
+# ==============================================================================
+# Ghostty embeds JetBrains Mono by default, but JetBrains Mono Nerd Font 
+# or Fira Code provides complete icon rendering out of the box.
+font-family = "Fira Code"
+font-size = 12
+
+# Font feature ligatures (e.g., !=, ==>, ->)
+font-feature = calt
+font-feature = liga
+
+# Adjust line height & cell padding if text feels crowded
+adjust-cell-height = 10%
+
+# ==============================================================================
+# THEME & APPEARANCE
+# ==============================================================================
+# Built-in theme name (Run `ghostty +list-themes` in terminal to see all)
+theme = CGA
+
+# Background opacity and blur (0.0 - 1.0)
+#background-opacity = 0.92
+#background-blur-radius = 20
+
+# Window Padding (Left/Right, Top/Bottom)
+window-padding-x = 12
+window-padding-y = 10
+
+# Seamless titlebar blending
+window-decoration = true
+macos-titlebar-style = transparent
+
+# ==============================================================================
+# CURSOR & MOUSE
+# ==============================================================================
+cursor-style = block
+cursor-style-blink = true
+# cursor-color = #f5e0dc
+
+# Mouse behavior
+mouse-hide-while-typing = true
+copy-on-select = clipboard
+
+# ==============================================================================
+# TERMINAL BEHAVIOR & INTEGRATION
+# ==============================================================================
+# Enable shell integration (Zsh, Bash, Fish auto-detect)
+shell-integration = detect
+shell-integration-features = cursor,sudo,title
+
+# Bell settings (mute sound, keep visual signals if any)
+bell-features = no-audio
+
+# Scrollback lines
+scrollback-limit = 10000
+
+# Perform native linear color blending (prevents dark halo artifacts around text)
+# gamma-correction = linear-corrected
+
+# ==============================================================================
+# KEYBINDINGS
+# ==============================================================================
+# Split Navigation (Alt + Arrow Keys)
+keybind = alt+left=goto_split:left
+keybind = alt+right=goto_split:right
+keybind = alt+up=goto_split:top
+keybind = alt+down=goto_split:bottom
+
+# Creating Splits
+keybind = ctrl+shift+d=new_split:right
+keybind = ctrl+shift+s=new_split:down
+
+# Reload Config Keybind (Cmd+Shift+, on macOS / Ctrl+Shift+, on Linux is default)
+keybind = super+r=reload_config
