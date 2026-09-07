@@ -3,14 +3,14 @@
 # ==============================================================================
 # Fixed window title. Ghostty ignores title escape sequences from programs
 # (tmux, Neovim) while this is set, so the header never changes.
-title = Winning on all fronts
+title = WINNING ON ALL FRONTS
 window-title-font-family = "Fira Code"
 
 # ==============================================================================
 # FONT
 # ==============================================================================
 font-family = "Fira Code"
-font-size = 12
+font-size = 15
 font-feature = calt
 font-feature = liga
 adjust-cell-height = 10%
@@ -19,7 +19,8 @@ adjust-cell-height = 10%
 # THEME & APPEARANCE
 # ==============================================================================
 # Built-in theme name (Run `ghostty +list-themes` in terminal to see all)
-theme = CGA
+# Same palette family as CGA with a lifted #141414 background. Previous: CGA
+theme = IBM 5153 CGA
 
 window-padding-x = 12
 window-padding-y = 10
