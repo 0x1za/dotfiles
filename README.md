@@ -52,26 +52,41 @@ chezmoi uses a naming convention in the source directory:
 
 Run `chezmoi source-path` to confirm the location on your machine.
 
-## Jokes
+## Operating guide
 
-Because a dotfiles repo without at least one bad joke is just a backup.
+Practical guidance for maintaining this setup.
 
-- How do you generate a random string? Put a new developer in front of Vim and tell them to exit.
-- My dotfiles are like my gym membership: heavily configured, rarely applied.
-- I spent six hours tuning my Neovim config today. Productivity gains: pending. Estimated ROI: 2043.
-- `chezmoi apply` is the only relationship I have where "it worked on my machine" is a valid excuse.
-- Why did the developer put their config in git? So they could blame someone else for `dot_zshrc`.
-- Q: What is the difference between a terminal emulator and a therapist? A: The therapist does not have a `theme` option.
-- Ghostty, tmux, Neovim. Three programs, one goal: making sure I never leave a single window.
-
-### Chappelle's Show edition
-
-- **Wu-Tang Financial:** "You need to diversify yo' dotfiles." I put half in Neovim, half in Ghostty, and a small hedge in `dot_bashrc` in case zsh ever crashes.
-- **Rick James:** `chezmoi apply --force` overwrote my hand-edited `.zshrc` and all it said was "I'm chezmoi, b\*\*\*\*." Cocaine is a hell of a drug. So is `--force`.
-- **Charlie Murphy:** "Darkness, everybody." That was the terminal after I set `theme = CGA` without reading the docs.
-- **Prince:** Challenged my old config to a game of who boots faster. LazyVim won. Then it served the losers `lazy-lock.json`. Game, blouses.
-- **When Keeping It Real Goes Wrong:** Deus decided to keep it real and run `rm -rf ~/.config` to "start fresh." Deus now has a chezmoi repo.
-- **Player Haters Ball:** "I hate your tab width. I'm gonna hate it in the morning." Two spaces. Silky Johnson approves.
-- **Lil Jon:** Me, every time a plugin update breaks nothing: WHAT? OKAY! YEAAAH!
-- **The Wrap It Up box:** What GitHub should show me around hour four of tweaking `colorscheme.lua`.
-
+<table>
+  <tr>
+    <td width="240"><img src="https://media.giphy.com/media/128RvI3CzjuXG8/giphy.gif" width="220" alt="Wu-Tang Financial"></td>
+    <td>**Diversify your dotfiles.**<br>Never keep everything in one file. This repo holds Neovim, Ghostty, tmux, and zsh as separate positions, with a small hedge in `dot_bashrc` in case zsh ever crashes. Diversify yo' bonds.</td>
+  </tr>
+  <tr>
+    <td width="240"><img src="https://media.giphy.com/media/gizNN8vCaotYA/giphy.gif" width="220" alt="Rick James"></td>
+    <td>**Handle `--force` with care.**<br>`chezmoi apply --force` will overwrite a hand-edited `.zshrc` without asking, then introduce itself. Run `chezmoi diff` first. It is a hell of a flag.</td>
+  </tr>
+  <tr>
+    <td width="240"><img src="https://media.giphy.com/media/uk0OE1jkLXwUkHSGlk/giphy.gif" width="220" alt="Charlie Murphy"></td>
+    <td>**Read the theme docs before committing.**<br>`theme = CGA` in Ghostty is a bold choice. Test it on a throwaway window first, or your next launch is darkness, everybody.</td>
+  </tr>
+  <tr>
+    <td width="240"><img src="https://media.giphy.com/media/d9ltR6odFmQsE/giphy.gif" width="220" alt="Prince holding up a basketball"></td>
+    <td>**Let the lockfile settle disputes.**<br>When two machines disagree on plugin versions, `lazy-lock.json` decides. LazyVim wins, then serves the losers pancakes. Game, blouses.</td>
+  </tr>
+  <tr>
+    <td width="240"><img src="https://media.giphy.com/media/BMrJzUlkcjdg4/giphy.gif" width="220" alt="Vernon Franklin losing it in a boardroom"></td>
+    <td>**Do not start fresh with `rm -rf ~/.config`.**<br>Keeping it real by wiping the config directory to "start clean" goes wrong every time. Clone this repo and run `chezmoi init --apply` instead.</td>
+  </tr>
+  <tr>
+    <td width="240"><img src="https://media.giphy.com/media/bCDzFTSQ3JL8c/giphy.gif" width="220" alt="Silky Johnson at the Player Haters Ball"></td>
+    <td>**Indentation policy.**<br>Two spaces, enforced by `stylua.toml`. Tab enthusiasts are welcome to open an issue. It will be read, hated, and hated again in the morning.</td>
+  </tr>
+  <tr>
+    <td width="240"><img src="https://media.giphy.com/media/Qf9SNhYtaC4aQ/giphy.gif" width="220" alt="Lil Jon shouting yeah"></td>
+    <td>**Updating plugins.**<br>Run `:Lazy update`, then open a Rust file and press `<leader>rr`. If it compiles: WHAT? OKAY! YEAAAH!</td>
+  </tr>
+  <tr>
+    <td width="240"><img src="https://media.giphy.com/media/S6PJSHMftMyPK/giphy.gif" width="220" alt="The Wrap It Up box"></td>
+    <td>**Time-boxing configuration work.**<br>Around hour four of adjusting `colorscheme.lua`, the box lights up. Commit what you have and go outside.</td>
+  </tr>
+</table>
