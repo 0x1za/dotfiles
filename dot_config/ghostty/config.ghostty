@@ -1,75 +1,80 @@
 # ==============================================================================
-# FONT CONFIGURATION
+# WINDOW HEADER
 # ==============================================================================
-# Ghostty embeds JetBrains Mono by default, but JetBrains Mono Nerd Font 
-# or Fira Code provides complete icon rendering out of the box.
-font-family = "Fira Code"
-font-size = 12
+# Fixed window title. Ghostty ignores title escape sequences from programs
+# (tmux, Neovim) while this is set, so the header never changes.
+title = Winning on all fronts
+window-title-font-family = "Fira Code"
 
-# Font feature ligatures (e.g., !=, ==>, ->)
+# ==============================================================================
+# FONT
+# ==============================================================================
+# Nerd Font variant of Fira Code so LazyVim, neo-tree and the statusline icons
+# render instead of showing boxes. Ligatures still work.
+font-family = "FiraCode Nerd Font Mono"
+font-size = 12
+font-thicken = true
 font-feature = calt
 font-feature = liga
-
-# Adjust line height & cell padding if text feels crowded
 adjust-cell-height = 10%
 
 # ==============================================================================
 # THEME & APPEARANCE
 # ==============================================================================
-# Built-in theme name (Run `ghostty +list-themes` in terminal to see all)
-theme = CGA
+# Matches the gruvbox colorscheme in Neovim so the editor and the shell agree.
+# Previous choice, if you want it back: theme = CGA
+theme = Gruvbox Dark Hard
+# Nudge low-contrast ls/grep colours up so they stay readable on dark backgrounds.
+minimum-contrast = 1.1
 
-# Background opacity and blur (0.0 - 1.0)
-#background-opacity = 0.92
-#background-blur-radius = 20
-
-# Window Padding (Left/Right, Top/Bottom)
 window-padding-x = 12
 window-padding-y = 10
-
-# Seamless titlebar blending
+window-padding-balance = true
 window-decoration = true
 macos-titlebar-style = transparent
+# Remember windows, tabs and splits across restarts.
+window-save-state = always
 
 # ==============================================================================
 # CURSOR & MOUSE
 # ==============================================================================
 cursor-style = block
 cursor-style-blink = true
-# cursor-color = #f5e0dc
-
-# Mouse behavior
 mouse-hide-while-typing = true
 copy-on-select = clipboard
 
 # ==============================================================================
-# TERMINAL BEHAVIOR & INTEGRATION
+# TERMINAL BEHAVIOUR & INTEGRATION
 # ==============================================================================
-# Enable shell integration (Zsh, Bash, Fish auto-detect)
 shell-integration = detect
 shell-integration-features = cursor,sudo,title
-
-# Bell settings (mute sound, keep visual signals if any)
 bell-features = no-audio
-
-# Scrollback lines
-scrollback-limit = 10000
-
-# Perform native linear color blending (prevents dark halo artifacts around text)
-# gamma-correction = linear-corrected
+# Value is in bytes. The old 10000 gave roughly 100 lines of history.
+scrollback-limit = 100000000
+# Option acts as Alt so LazyVim (alt+j/k), tmux and the split keybinds below
+# get real Alt sequences instead of unicode characters.
+macos-option-as-alt = true
+auto-update = check
 
 # ==============================================================================
 # KEYBINDINGS
 # ==============================================================================
-# Split Navigation (Alt + Arrow Keys)
+# Split navigation
 keybind = alt+left=goto_split:left
 keybind = alt+right=goto_split:right
 keybind = alt+up=goto_split:top
 keybind = alt+down=goto_split:bottom
 
-# Creating Splits
+# Creating and focusing splits
 keybind = ctrl+shift+d=new_split:right
 keybind = ctrl+shift+s=new_split:down
+keybind = super+shift+enter=toggle_split_zoom
 
-# Reload Config Keybind (Cmd+Shift+, on macOS / Ctrl+Shift+, on Linux is default)
+# Drop-down terminal from anywhere. Requires Ghostty in
+# System Settings > Privacy & Security > Accessibility.
+keybind = global:super+grave_accent=toggle_quick_terminal
+
+# Newline instead of submit in Claude Code and other REPLs.
+keybind = shift+enter=text:\x1b\r
+
 keybind = super+r=reload_config
