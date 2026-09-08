@@ -21,7 +21,8 @@ source "$ZSH/oh-my-zsh.sh"
 #------------------------------------------------------
 # Environment
 #------------------------------------------------------
-export TERM=tmux-256color
+# TERM is set by the terminal (xterm-ghostty) and by tmux (default-terminal in
+# ~/.tmux.conf). Forcing it here breaks mode restore when TUI apps exit.
 
 export VISUAL=nvim
 export EDITOR="$VISUAL"
