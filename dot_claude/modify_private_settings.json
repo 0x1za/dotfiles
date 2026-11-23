@@ -1,0 +1,17 @@
+#!/bin/sh
+# Merges the LSP plugins into ~/.claude/settings.json and leaves every other key as it is,
+# since the rest of that file is machine-specific and this repo is public.
+input=$(cat)
+[ -z "$input" ] && input='{}'
+printf '%s' "$input" | jq --arg local "$HOME/.claude/local-plugins" '
+  .extraKnownMarketplaces.local = { source: { source: "directory", path: $local } }
+  | .enabledPlugins += {
+      "dart-lsp@local": true,
+      "gopls-lsp@claude-plugins-official": true,
+      "jdtls-lsp@claude-plugins-official": true,
+      "lua-lsp@claude-plugins-official": true,
+      "pyright-lsp@claude-plugins-official": true,
+      "ruby-lsp@claude-plugins-official": true,
+      "rust-analyzer-lsp@claude-plugins-official": true,
+      "typescript-lsp@claude-plugins-official": true
+    }'

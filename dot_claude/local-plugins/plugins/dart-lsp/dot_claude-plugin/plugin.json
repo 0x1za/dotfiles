@@ -1,0 +1,12 @@
+{
+  "name": "dart-lsp",
+  "description": "Dart language server for Claude Code's LSP tool",
+  "version": "1.0.0",
+  "lspServers": {
+    "dart": {
+      "command": "dart",
+      "args": ["language-server", "--protocol=lsp"],
+      "extensionToLanguage": { ".dart": "dart" }
+    }
+  }
+}

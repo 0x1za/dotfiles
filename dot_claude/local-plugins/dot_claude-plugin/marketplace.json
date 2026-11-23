@@ -1,0 +1,11 @@
+{
+  "name": "local",
+  "owner": { "name": "0x1za" },
+  "plugins": [
+    {
+      "name": "dart-lsp",
+      "description": "Dart language server for Claude Code's LSP tool",
+      "source": "./plugins/dart-lsp"
+    }
+  ]
+}
