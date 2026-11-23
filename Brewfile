@@ -6,7 +6,11 @@ tap "jetbrains/utils"
 brew "chezmoi"
 brew "jq"
 
-# Language servers behind Claude Code's LSP tool
+# Ruby, Node and Python versions; see ~/.config/mise/config.toml
+brew "mise"
+
+# Language servers behind Claude Code's LSP tool. The npm ones are in ~/.default-npm-packages and
+# ruby-lsp in ~/.default-gems, so mise installs them into every Node and Ruby version.
 brew "bash-language-server"
 brew "go"
 brew "gopls"
@@ -15,7 +19,3 @@ brew "jetbrains/utils/kotlin-lsp"
 brew "lua-language-server"
 brew "rust-analyzer"
 cargo "protols"
-npm "svelte-language-server"
-# From npm, not Homebrew, whose formula depends on TypeScript 7; TypeScript 6 itself is pinned in
-# run_onchange_install-packages.sh.tmpl.
-npm "typescript-language-server"

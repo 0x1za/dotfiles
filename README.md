@@ -47,6 +47,7 @@ chezmoi uses a naming convention in the source directory:
 ## Packages
 
 - `Brewfile` lists the packages the dotfiles depend on, including Homebrew formulae and npm and cargo tools. Editing it reruns `brew bundle` on the next `chezmoi apply`.
+- mise manages Ruby, Node and Python versions. Each repo's own `.ruby-version`, `.nvmrc`, `.node-version` or `.python-version` file decides the version, and `~/.config/mise/config.toml` sets the defaults. A missing version is installed the first time a repo uses it. mise installs `~/.default-gems` and `~/.default-npm-packages` into every new Ruby and Node, which is how each version gets the language servers.
 - `.chezmoiexternal.toml` fetches things that aren't packages: tpm and the `starpls` binary.
 - The `run_onchange_` scripts embed the hash of the file they act on, so they run only when that file changes. That file is the `Brewfile`, `.tmux.conf`, or the Claude Code plugin list in `dot_claude/modify_private_settings.json`.
 

@@ -1,4 +1,0 @@
-#!/bin/sh
-# Homebrew's CocoaPods fails to find its own gems when rvm's GEM_PATH/GEM_HOME are set.
-# Delete this wrapper once rvm is replaced.
-exec env -u GEM_PATH -u GEM_HOME /opt/homebrew/bin/pod "$@"

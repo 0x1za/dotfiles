@@ -1,0 +1,9 @@
+# Language versions. A repo's own pin file wins over these defaults.
+[tools]
+node = "22"
+python = "3.12"
+ruby = "3.4.5"
+
+[settings]
+# Read the pin files repos already have: .nvmrc, .node-version, .python-version and .ruby-version.
+idiomatic_version_file_enable_tools = ["node", "python", "ruby"]
