@@ -176,3 +176,10 @@ fi
 
 # iTerm2 shell integration (only load inside iTerm2 to avoid raw escape sequences elsewhere)
 [ "$TERM_PROGRAM" = "iTerm.app" ] && [ -f "$HOME/.iterm2_shell_integration.zsh" ] && source "$HOME/.iterm2_shell_integration.zsh"
+
+# opencode
+export PATH=/Users/deus/.opencode/bin:$PATH
+
+
+# Added by Antigravity CLI installer
+export PATH="/Users/deus/.local/bin:$PATH"

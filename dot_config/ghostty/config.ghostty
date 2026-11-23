@@ -10,7 +10,7 @@ window-title-font-family = "Fira Code"
 # FONT
 # ==============================================================================
 font-family = "Fira Code"
-font-size = 15
+font-size = 12
 font-feature = calt
 font-feature = liga
 adjust-cell-height = 10%
