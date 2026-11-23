@@ -46,11 +46,6 @@ if [ -d "$M2_HOME" ]; then
   export PATH="${M2_HOME}/bin:${PATH}"
 fi
 
-# Flutter
-if [ -d "$HOME/Mars/packages/flutter/bin" ]; then
-  export PATH="$PATH:$HOME/Mars/packages/flutter/bin"
-fi
-
 # Android SDK
 if [ -d "$HOME/Library/Android/Sdk" ]; then
   export ANDROID_HOME="$HOME/Library/Android/Sdk"

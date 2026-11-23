@@ -10,7 +10,6 @@ export PATH="$PATH:/Users/deus/Library/Application Support/JetBrains/Toolbox/scr
 # The original version is saved in .zprofile.pysave
 PATH="/Library/Frameworks/Python.framework/Versions/3.12/bin:${PATH}"
 export PATH
-export PATH="/Users/deus/flutter/bin:$PATH"
 
 # Added by Obsidian
 export PATH="$PATH:/Applications/Obsidian.app/Contents/MacOS"
