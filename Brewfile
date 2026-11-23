@@ -16,7 +16,6 @@ brew "lua-language-server"
 brew "rust-analyzer"
 cargo "protols"
 npm "svelte-language-server"
+# From npm, not Homebrew, whose formula depends on TypeScript 7; TypeScript 6 itself is pinned in
+# run_onchange_install-packages.sh.tmpl.
 npm "typescript-language-server"
-# typescript-language-server drives tsserver.js, which TypeScript 7 (the Go port) no longer ships;
-# that is also why this comes from npm and not Homebrew, whose formula depends on TypeScript 7.
-npm "typescript@6"

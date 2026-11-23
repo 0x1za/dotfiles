@@ -5,3 +5,6 @@ export PATH="/opt/homebrew/bin:$PATH"
 # brew bundle installs npm entries with the first npm on PATH, so load nvm's.
 [ -s "$HOME/.nvm/nvm.sh" ] && . "$HOME/.nvm/nvm.sh"
 brew bundle --file={{ joinPath .chezmoi.sourceDir "Brewfile" | quote }}
+# typescript-language-server drives tsserver.js, which TypeScript 7 (the Go port) no longer ships.
+# A Brewfile npm entry can't pin a version, and brew bundle would upgrade it to 7.
+npm install -g typescript@6
