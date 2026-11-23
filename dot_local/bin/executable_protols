@@ -1,0 +1,3 @@
+#!/bin/sh
+# Mason's copy, put on PATH for the proto-lsp plugin.
+exec "$HOME/.local/share/nvim/mason/bin/protols" "$@"

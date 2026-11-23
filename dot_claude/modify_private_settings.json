@@ -6,12 +6,19 @@ input=$(cat)
 printf '%s' "$input" | jq --arg local "$HOME/.claude/local-plugins" '
   .extraKnownMarketplaces.local = { source: { source: "directory", path: $local } }
   | .enabledPlugins += {
+      "bash-lsp@local": true,
       "dart-lsp@local": true,
+      "proto-lsp@local": true,
+      "starlark-lsp@local": true,
+      "svelte-lsp@local": true,
+      "clangd-lsp@claude-plugins-official": true,
       "gopls-lsp@claude-plugins-official": true,
       "jdtls-lsp@claude-plugins-official": true,
+      "kotlin-lsp@claude-plugins-official": true,
       "lua-lsp@claude-plugins-official": true,
       "pyright-lsp@claude-plugins-official": true,
       "ruby-lsp@claude-plugins-official": true,
       "rust-analyzer-lsp@claude-plugins-official": true,
+      "swift-lsp@claude-plugins-official": true,
       "typescript-lsp@claude-plugins-official": true
     }'

@@ -1,0 +1,16 @@
+{
+  "name": "svelte-lsp",
+  "description": "Svelte language server for Claude Code's LSP tool",
+  "version": "1.0.0",
+  "lspServers": {
+    "svelte": {
+      "command": "svelteserver",
+      "extensionToLanguage": {
+        ".svelte": "svelte"
+      },
+      "args": [
+        "--stdio"
+      ]
+    }
+  }
+}

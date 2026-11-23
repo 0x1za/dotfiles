@@ -1,0 +1,13 @@
+{
+  "name": "proto-lsp",
+  "description": "Protocol Buffers language server (protols) for Claude Code's LSP tool",
+  "version": "1.0.0",
+  "lspServers": {
+    "protols": {
+      "command": "protols",
+      "extensionToLanguage": {
+        ".proto": "proto"
+      }
+    }
+  }
+}

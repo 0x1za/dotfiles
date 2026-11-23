@@ -1,11 +1,34 @@
 {
   "name": "local",
-  "owner": { "name": "0x1za" },
+  "owner": {
+    "name": "0x1za"
+  },
+  "description": "Language servers the official marketplace lacks",
   "plugins": [
+    {
+      "name": "bash-lsp",
+      "description": "Bash language server for Claude Code's LSP tool",
+      "source": "./plugins/bash-lsp"
+    },
     {
       "name": "dart-lsp",
       "description": "Dart language server for Claude Code's LSP tool",
       "source": "./plugins/dart-lsp"
+    },
+    {
+      "name": "proto-lsp",
+      "description": "Protocol Buffers language server for Claude Code's LSP tool",
+      "source": "./plugins/proto-lsp"
+    },
+    {
+      "name": "starlark-lsp",
+      "description": "Bazel/Starlark language server for Claude Code's LSP tool",
+      "source": "./plugins/starlark-lsp"
+    },
+    {
+      "name": "svelte-lsp",
+      "description": "Svelte language server for Claude Code's LSP tool",
+      "source": "./plugins/svelte-lsp"
     }
   ]
 }
