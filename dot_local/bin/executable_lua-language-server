@@ -1,3 +1,0 @@
-#!/bin/sh
-# Mason's copy, put on PATH for Claude Code's lua-lsp plugin.
-exec "$HOME/.local/share/nvim/mason/bin/lua-language-server" "$@"

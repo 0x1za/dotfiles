@@ -1,0 +1,9 @@
+[".tmux/plugins/tpm"]
+type = "git-repo"
+url = "https://github.com/tmux-plugins/tpm"
+refreshPeriod = "168h"
+
+[".local/bin/starpls"]
+type = "file"
+url = "https://github.com/withered-magic/starpls/releases/download/v0.1.22/starpls-darwin-arm64"
+executable = true

@@ -1,0 +1,11 @@
+#!/bin/sh
+# Plugin list hash: {{ include "dot_claude/modify_private_settings.json" | sha256sum }}
+# Installs the plugins that dot_claude/modify_private_settings.json turns on.
+set -e
+export PATH="/opt/homebrew/bin:$PATH"
+command -v claude >/dev/null || exit 0
+claude plugin marketplace add "$HOME/.claude/local-plugins" >/dev/null 2>&1 || true
+claude plugin marketplace update local >/dev/null 2>&1 || true
+for p in $(jq -r '.enabledPlugins | keys[]' "$HOME/.claude/settings.json"); do
+  claude plugin install "$p" >/dev/null || echo "could not install $p" >&2
+done

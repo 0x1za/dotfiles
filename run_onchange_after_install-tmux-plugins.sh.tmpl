@@ -1,0 +1,5 @@
+#!/bin/sh
+# .tmux.conf hash: {{ include "dot_tmux.conf" | sha256sum }}
+# Installs the plugins named in ~/.tmux.conf, so a new one needs no prefix + I.
+set -e
+"$HOME/.tmux/plugins/tpm/bin/install_plugins"

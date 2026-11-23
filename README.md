@@ -44,6 +44,12 @@ chezmoi uses a naming convention in the source directory:
 - `executable_` → file is created with `+x`
 - `symlink_` → creates a symlink instead of a regular file
 
+## Packages
+
+- `Brewfile` lists the packages the dotfiles depend on, including Homebrew formulae and npm and cargo tools. Editing it reruns `brew bundle` on the next `chezmoi apply`.
+- `.chezmoiexternal.toml` fetches things that aren't packages: tpm and the `starpls` binary.
+- The `run_onchange_` scripts embed the hash of the file they act on, so they run only when that file changes. That file is the `Brewfile`, `.tmux.conf`, or the Claude Code plugin list in `dot_claude/modify_private_settings.json`.
+
 ## Source directory
 
 ```

@@ -1,3 +1,0 @@
-#!/bin/sh
-# jdtls 1.63+ needs Java 25; pin Homebrew's JDK so Claude Code's jdtls-lsp plugin works in repos that put an older java first.
-JAVA_HOME=/opt/homebrew/opt/openjdk/libexec/openjdk.jdk/Contents/Home exec "$HOME/.local/share/nvim/mason/bin/jdtls" "$@"
